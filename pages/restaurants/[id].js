@@ -76,7 +76,7 @@ const RestaurantPage = ({restaurantData}) => {
                        
                     </Col>   
                     <Col width='3'>
-                        <Button label='Order TakeOut'></Button>
+                        <Button label='Order TakeOut' marginBottom='1'></Button>
                         <Button label='Make a Reservation'></Button>
                         
                             { streetAddress && city && state && zipCode &&

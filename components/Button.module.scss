@@ -15,9 +15,16 @@
     transition: all 0.3s;
     color: black;
     display: inline-block;
+
     &:hover {
         background-color: darkgreen;
     }
+
+    
+    @include mixins.margins();
+
+
+
 }
 
 .primary {

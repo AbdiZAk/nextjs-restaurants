@@ -9,12 +9,15 @@ const Button = ({
     label = "Default label",
     type,
     clickHandler,
-    path
+    path,
+    marginBottom
 }) => {
     let buttonClasses = cx({
         btn : true,
         primary : type === 'primary',
         secondary : type === 'secondary',
+        [`${marginBottom}`] : marginBottom,
+        [`margin-bottom-${marginBottom}`]: marginBottom
     });
     
     return (
