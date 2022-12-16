@@ -1,1 +1,1 @@
-Next JS Restaurants app that uses WordPress as a Content Managment system.  
+Next JS Restaurants app that uses WordPress as a Content Managment System.  
