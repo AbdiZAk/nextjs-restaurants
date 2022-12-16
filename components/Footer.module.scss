@@ -1,0 +1,7 @@
+@use '../sass/abstracts/mixins';
+@use '../sass/abstracts/vars';
+
+.footer {
+    background-color: vars.$color_green;
+    padding: 2rem 0;
+}
