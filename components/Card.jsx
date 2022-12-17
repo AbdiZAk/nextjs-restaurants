@@ -3,9 +3,18 @@ import Heading from './Heading'
 import Image from 'next/image'
 import Paragraph from './Paragraph'
 import Button from './Button'
+import classNames from 'classnames/bind'
 
+let cx = classNames.bind(styles)
 
-const Card = ({data}) => {
+const Card = ({data, view}) => {
+    let cardClasses = cx({
+        card: true,
+        card_content: true,
+        cardImageGrid: true,
+        
+    })
+
     const {title, excerpt, slug, featuredImage, restaurantTypes} = data
     const restaurantTypesString = restaurantTypes.edges.map((edge) => {
         return edge.node.name;
@@ -20,7 +29,7 @@ const Card = ({data}) => {
                 alt={featuredImage.node.altText}
                 width={featuredImage.node.mediaDetails.width}
                 height={featuredImage.node.mediaDetails.height}
-                className={styles.cardImage}
+                className={styles.cardImageGrid}
             />
         }
         <div className={styles.card_content}>
@@ -54,4 +63,3 @@ const Card = ({data}) => {
 }
 
 export default Card
-

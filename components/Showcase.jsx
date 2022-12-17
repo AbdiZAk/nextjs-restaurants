@@ -35,7 +35,7 @@ const Showcase = ({
                 
                 }
                 {cta && 
-                    <Button label={cta}/>
+                    <Button scroll='filters' label={cta}/>
                 }
                 
             </Container>

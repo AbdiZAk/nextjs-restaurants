@@ -52,9 +52,15 @@
 		&.margin-bottom-#{$i} {
 			margin-bottom: #{$i}rem;
 		}
+
 		&.margin-top-#{$i} {
 			margin-top: #{$i}rem;
+		}
+
+		&.margin-left-#{$i} {
+			margin-left: #{$i}rem;
 		}
 	}
 	
 }
+

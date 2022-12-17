@@ -10,23 +10,29 @@ const Button = ({
     type,
     clickHandler,
     path,
-    marginBottom
+    marginBottom,
+    marginLeft,
+    scroll,
 }) => {
     let buttonClasses = cx({
         btn : true,
         primary : type === 'primary',
         secondary : type === 'secondary',
-        [`${marginBottom}`] : marginBottom,
-        [`margin-bottom-${marginBottom}`]: marginBottom
+        [`margin-bottom-${marginBottom}`]: marginBottom,
+        [`margin-left-${marginLeft}`]: marginLeft
     });
     
     return (
         path ? 
-        <Link href={path} className={buttonClasses}>
-            {label}
-        </Link>
-        :
-        <button className={buttonClasses} onClick={clickHandler}> {label}</button>
+            <Link href={path} className={buttonClasses}>
+                {label}
+            </Link>
+        : scroll ? 
+            <Link href={`#${scroll}`} className={buttonClasses}>
+                {label}
+            </Link>
+            
+        : <button className={buttonClasses} onClick={clickHandler}> {label}</button>
 
         );
 }

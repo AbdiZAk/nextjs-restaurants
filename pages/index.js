@@ -1,13 +1,10 @@
 import { useState } from "react"
-import Button from "../components/Button"
 import Container from "../components/Container"
 import Grid from "../components/Grid"
 import Filters from "../components/Filters"
-import Heading from "../components/Heading"
 import Layout from "../components/Layout"
 import Showcase from '../components/Showcase'
 import { getAllRestaurants, getAllRestaurantTypes } from "../lib/api"
-
 
 export async function getStaticProps() {
     const restaurants = await getAllRestaurants();
@@ -52,7 +49,7 @@ const HomePage = ({restaurants, restaurantTypes}) => {
                     setActiveCategory={setActiveCategory}
                     categories={restaurantTypes}   
                 />
-                <Grid data={filteredRestaurants}/>
+                <Grid cardType='grid' data={filteredRestaurants}/>
             
             </Container>
           

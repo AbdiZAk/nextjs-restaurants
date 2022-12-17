@@ -1,14 +1,22 @@
+@use '../sass/abstracts/mixins';
+@use '../sass/abstracts/vars';
+
 .card {
     background-color: white;
     border: 1px solid gray;
+    
 }
 
 .card_content {
     padding: 1rem;
+    
+    
 }
 
-.cardImage {
+.cardImageGrid {
     width: 100%;
     height: auto;
     margin-bottom: 1rem;
+    
 }
+

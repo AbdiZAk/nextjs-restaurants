@@ -9,7 +9,7 @@ const Grid = ({data}) => {
         
         {data.map((restaurant, index) => {
             return (
-                <Card data={restaurant.node} key={index}/>
+                <Card view='grid' data={restaurant.node} key={index}/>
             )
             
         })}    
